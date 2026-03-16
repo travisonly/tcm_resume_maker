@@ -448,7 +448,7 @@ async function generate() {
     const systemPrompt = docType === 'resume' ? RESUME_SYSTEM : COVER_SYSTEM;
     const css = docType === 'resume' ? RESUME_CSS : COVER_CSS;
 
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
+    const response = await fetch('https://tcm-proxy.jtravisadams1.workers.dev/v1/messages', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
